@@ -1,0 +1,74 @@
+<section class="container">
+    <div class="box box--green" style="z-index:-1">z-index: -1</div>
+    <div class="box box--red" style="z-index:0; top:50px; left: 50px">z-index: 0</div>
+    <div class="box box--yellow" style="z-index:1; top:100px; left:100px">z-index: 1</div>
+</section>
+
+
+<section class="container">
+    <!-- Nesting -->
+    <div class="box box--red" style="z-index:2; top:80px; left:80px">
+        z-index: 2
+        <div class="box box--blue" style="z-index:-1;">z-index: -1</div>
+    </div>
+    <div class="box box--yellow" style="z-index:1">
+        z-index: 1
+        <div class="box box--orange" style="z-index:3">z-index: 3</div>
+        <div class="box box--orange" style="z-index:9999999999 !important">z-index: 9999999999 !important</div>
+    </div>
+    <!-- END Nesting -->
+    
+    <!-- Indntical stacking order -->
+    <div class="box box--green" style="z-index:1; right:10px">z-index: 1</div>
+    <div class="box box--purple" style="z-index:1; right:20px; top:33px">z-index: 1</div>
+    <!-- END Indntical stacking order -->
+    
+    <!-- Fixed positioning -->
+    <div class="box box--green" style="z-index:1; position:fixed; top:410px; left:70px;">
+        <p>position: fixed;</p>
+        <p>z-index: 1</p>
+    </div>
+    <!-- END Fixed positioning -->
+</section>
+
+
+<!-- Try change the z-index of this container to any integer -->
+<section class="container" style="z-index:01">
+    Backgrounds and borders
+    <div class="box box--purple" style="z-index:-1; margin-left:-20px">Negative z-index</div>
+    <div class="rect rect--blue" style="margin:40px 0 -135px 5px">Block elements</div>
+    <div class="rect rect--red" style="float:left; margin:0 0 -135px 10px">Floated elements</div>
+    <span class="rect rect--green" style="display:inline-block; margin-left:15px">Inline and inline-block elements</span>
+    <div class="box box--orange" style="z-index:0; margin:-250px 0 0 250px">Positive z-index (also includes 0)</div>
+</section>
+<style>
+    .container {
+        background: rgba( 215, 215, 215, 0.5 );
+        border: 5px solid black;
+        height: 300px;
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+        width: 500px;
+    }
+
+    .box {
+        padding: 5px;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
+
+    .rect {
+        padding: 5px;
+        height: 150px;
+        width: 250px;
+    }
+
+    .box--blue, .rect--blue { background: skyblue }
+    .box--green, .rect--green { background: limegreen }
+    .box--orange, .rect--orange { background: orange }
+    .box--purple, .rect--purple { background: rebeccapurple; color: white }
+    .box--red, .rect--red { background: salmon }
+    .box--yellow, .rect--yellow { background: gold }
+</style>

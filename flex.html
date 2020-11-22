@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {}
+
+        .container {
+            position: relative;
+        }
+
+        .topleft {
+            background-color: white;
+            width: auto;
+            height: auto;
+            right: 10%;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            bottom: 10%;
+            font-size: 18px;
+        }
+
+        .border {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: solid 1px #D7A297;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .af {
+            position: absolute;
+            top: 28px;
+            left: 16px;
+            font-size: 18px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            min-width: 500px;
+        }
+
+        .clearfix {
+            position: relative;
+            background-color: #d5b3ac;
+        }
+
+        footer .goTop {
+            background-color: #d5b3ac;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-top: -45px;
+            margin-left: -60px;
+            width: 120px;
+            height: 120px;
+            background-image: url(top.png);
+            background-repeat: no-repeat;
+            transition: transform .5s, -webkit-transform .5s;
+          
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        footer .goTop:hover { 
+            transform: translate(0,-10px);
+        }
+        footer .goTop:checked { 
+          position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Image Text</h2>
+    <p>Add some text to an image in the top left corner:</p>
+
+    <div class="container">
+        <img src="a.png" alt="Cinque Terre" width="1000" height="300">
+        <div class="topleft">
+            <div class="border">
+                Top Left
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="clearfix">
+    <!--footer-->
+    <div class="goTop"></div>
+    <div class="wrap b-box clearfix">
+        <!--wrap-->
+        <div class="top">
+            <div class="left">
+                <!-- left -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
