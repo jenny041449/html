@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>表單驗證</title>
+</head>
+<body>
+    <form onsubmit="return verify(this)">
+        <table border="0">
+            <tr>
+                <td>姓名:</td>
+                <td><input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>地址:</td>
+                <td><textarea name="address" rows="4" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td>郵遞區號:</td>
+                <td><input type="text" name="zip"/></td>
+            </tr>
+            <tr>
+                <td>人数:</td>
+                <td><input type="text" name="personNumber"/></td>
+            </tr>
+            <tr>
+                <td>金额:</td>
+                <td><input type="text" name="money"/></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input type="text" name="email"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit"/></td>
+                <td><input type="reset"/></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //表單驗證
+        //主要針對"輸入類型"的欄位進行驗證
+        //
+        //驗證：只要找到和是的正則表達式，驗證的寫法都類似 
+
+        function verify(myform) {
+
+            let errorMsg = "";
+
+            if (myform.name.value === "") {
+                errorMsg += "姓名不能為空！\n";
+            }
+
+            if (myform.address.value == "") {
+                errorMsg += "地址不能為空！\n";
+            }
+
+            if (myform.zip.value.length != 3) {
+                errorMsg += "郵遞區號必须是3位！\n";
+            }
+
+            let v1 = myform.personNumber.value;
+            if (isNaN(v1)) {
+                errorMsg += "人數不是一個有效的数字！\n";
+            }
+            
+            let v2 = myform.money.value;
+            if (isNaN(v2)) {
+                errorMsg += "金额不是有效的数字！\n";
+            }
+
+            let pattern = /\w+@[0-9a-zA-Z_]+?\.[a-zA-Z]{2,3}/;
+            if (!pattern.test(myform.email.value)) {
+                errorMsg += "e-mail無效！\n";
+            }
+
+            if (errorMsg == "") {
+                return true;
+            } else {
+                alert(errorMsg);
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

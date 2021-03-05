@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <span onclick="changeToAbout()">關於我</span>
+   <span  onclick="changeToExp()">專長興趣</span>
+   <hr/>
+   <div id="about">大家好 我是楊博斯 服務於臺北市職能發展學院</div>
+   <div id="exps" style="display:none">資訊是我的本業，熱愛中華文化擅長中醫和算命</div>
+
+   <script>
+       function changeToAbout()
+       {
+           //先取得要操作的標籤
+           
+           let About = document.querySelector("#about");
+           let Exps = document.querySelector("#exps");
+
+           //再對標籤做操作
+           About.style.display = "block";
+           Exps.style.display  = "none";
+       }  
+       
+       function changeToExp()
+       {
+           //先取得要操作的標籤
+           
+           let About = document.querySelector("#about");
+           let Exps = document.querySelector("#exps");
+
+           //再對標籤做操作
+           About.style.display = "none";
+           Exps.style.display  = "block";
+       }  
+   </script>
+
+</body>
+</html>

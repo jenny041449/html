@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 照片牆展示切換 4 </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="css/v4.css">
+</head>
+<body>
+    <div id="app">
+        <a id="angleLeft"><i class="fas fa-angle-left fa-5x"></i></a>
+        <a id="angleRight"><i class="fas fa-angle-right fa-5x"></i></a>
+        <div id="contentPhoto"></div>
+        <div class="menu">
+            <nav>
+                <a id="a1"><img src="images/small/a1.jpg" alt=""></a>
+                <a id="a2"><img src="images/small/a2.jpg" alt=""></a>
+                <a id="a3"><img src="images/small/a3.jpg" alt=""></a>
+                <a id="a4"><img src="images/small/a4.jpg" alt=""></a>
+                <a id="a5"><img src="images/small/a5.jpg" alt=""></a>
+            </nav>
+        </div>
+    </div>
+    <script>
+    window.onload = function(){
+        //取得元件
+        let A1 = document.querySelector("#a1");
+        let A2 = document.querySelector("#a2");
+        let A3 = document.querySelector("#a3");
+        let A4 = document.querySelector("#a4");
+        let A5 = document.querySelector("#a5");
+        let ContentPhoto = document.querySelector("#contentPhoto");
+        
+        let AngleLeft = document.querySelector("#angleLeft");
+        let AngleRight = document.querySelector("#angleRight");
+        
+        let pageIndex = 1;
+        
+        //事件監聽
+        A1.addEventListener("click", showPhoto);
+        A2.addEventListener("click", showPhoto);
+        A3.addEventListener("click", showPhoto);
+        A4.addEventListener("click", showPhoto);
+        A5.addEventListener("click", showPhoto);
+        AngleLeft.addEventListener("click", angleLeftFn)
+        AngleRight.addEventListener("click", angleRightFn)
+
+        function showPhoto(){
+            
+            ContentPhoto.style.backgroundImage = 'url("images/big/' + this.id +'.jpg")';
+            // console.log(this.id);
+            // console.log(this.id.substr(1));
+            
+        }
+
+        function angleLeftFn(){
+            
+            console.log(pageIndex);
+            pageIndex = pageIndex - 1;
+            ContentPhoto.style.backgroundImage = 'url("images/big/a' + pageIndex +'.jpg")';
+        }
+        
+        function angleRightFn(){
+            pageIndex = pageIndex + 1;
+            ContentPhoto.style.backgroundImage = 'url("images/big/a' + pageIndex +'.jpg")';
+        }
+
+
+
+}
+    </script>
+</body>
+</html>

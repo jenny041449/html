@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <title>常用的驗證</title>
+</head>
+<body>
+    <table border="0">
+        <tr>
+            <td>輸入e-mail：</td>
+            <td><input type="text" id="email1" /></td>
+            <td><input type="button" value="驗證" onclick="verifyEmail()"/></td>
+        </tr>
+        <tr>
+            <td>輸入日期：</td>
+            <td><input type="text" id="date1" /></td>
+            <td><input type="button" value="驗證" onclick="verifyDate()"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>(mm/dd/yyyy)</td>
+        </td>
+        </tr>
+    </table>
+
+
+    <script>
+        
+        //驗證e-mail
+        function verifyEmail() {
+
+            //e-mail 正則表示式 可上google搜尋 https://blog.hsdn.net/1391.html
+            
+            let email = document.getElementById("email1").value;
+            let pattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/;
+            
+            if (pattern.test(email)) {
+                alert("e-mail驗證成功");
+            } else {
+                alert("邮箱驗證失e-mail驗證失敗");
+            }
+        }
+        
+        function verifyDate() {
+            
+            //日期正則表示式 可上google搜尋 https://blog.hsdn.net/1391.html
+            //檢查日期型態 (MM/DD/YYYY)
+
+            let email = document.getElementById("date1").value;
+            let pattern = /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/;
+            
+            if (pattern.test(email)) {
+                alert("日期驗證成功");
+            } else {
+                alert("驗證失敗");
+            }
+        }
+        
+    </script>
+</body>
+</html>

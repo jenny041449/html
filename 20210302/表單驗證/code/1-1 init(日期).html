@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dateDiv">
+        <span id="dateSpan">&nbsp;</span>
+        日期：<span id="datePanel"></span>
+    </div>
+
+    <form action="empInsert.php" method="post" >
+        <table width="600" border="0" cellpadding="0" cellspacing="0" class="empTable">
+            <caption>員工資料填寫</caption>
+            <tr><th width="35%">性名</th></tr>
+                <td></td>
+        </table>
+    </form>
+    <script>
+        function init(){
+            //取得當天的日期
+            // let str = "2021年3月1日"
+            let str = "<marquee>2021年3月1日</marquee>"
+   
+            //改變頁面上date Panel的內容
+            document.getElementById("datePanel").innerHTML = str;
+            //改變頁面上date Panel的外觀
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

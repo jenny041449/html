@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>       
+        //建立函式
+        // function show(msg)
+        // {
+        //     alert(msg);
+        // }
+
+        //呼叫函式
+        // show("Hello");
+        // show("你好");
+        // show(true);
+        
+        //====================================
+        //練習：設計一個1+...+n的函式
+        // function calc(n)
+        // {
+        //     let total=0;
+        //     for(let i=1;i<n+1;i++)
+        //    {              
+        //         // alert(i);//先測試一下 i 是否會從1到n
+        //         total = total + i;
+        //         // 上句的另種寫法 total+=i;
+        //    } 
+        //     alert(total);
+        // }
+        //    calc(10);
+        
+        //=========================================
+        //練習：設計一個1+...+n的函式（與使用者互動）
+        function calc(n)
+        {
+            let total=0;
+            for(let i=1;i<n+1;i++)
+           {              
+                total+=i;
+           } 
+            alert(`1+...+ ${n} 的和為${total}`);
+        }
+        
+        let input=prompt('請輸入正整數','');
+        inputToValue = parseInt(input);
+        calc(inputToValue);
+    </script>
+</body>
+</html>

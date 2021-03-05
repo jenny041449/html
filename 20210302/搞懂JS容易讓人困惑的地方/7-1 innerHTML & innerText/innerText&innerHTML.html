@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv{
+            width: 300px;
+            height: 200px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+   <p>跨平台網頁設計班</p>
+    <button id="btn1">innerText</button>
+    <button id="btn2">innerHTML</button>
+    <div id="dv"></div>
+    <script>
+        // 取得
+        let Btn1 = document.getElementById("btn1");
+        let Btn2 = document.getElementById("btn2");
+        let Dv = document.getElementById("dv");
+
+        //使用
+        Btn1.onclick=function(){
+            //innerText 可設定標籤之 文本內容
+            Dv.innerText='<p style="color:red">跨平台網頁設計班</p>';            
+        }
+        
+        Btn2.onclick=function(){
+            //innerHTML可設定標籤之 文本內容和屬性
+            Dv.innerHTML='<p style="color:red">跨平台網頁設計班</p>';            
+        }
+        
+    </script>
+</body>
+</html>

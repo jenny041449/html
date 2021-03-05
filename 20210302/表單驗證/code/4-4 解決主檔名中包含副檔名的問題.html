@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dateDiv">
+        <span id="dateSpan">&nbsp;</span>
+        日期：<span id="datePanel"></span>
+    </div>
+
+    <form action="empInsert.php" method="post" >
+        <table width="600" border="0" cellpadding="0" cellspacing="0" class="empTable">
+            <caption>員工資料填寫</caption>
+            <tr><th width="35%">性名</th>
+                <td>
+                    <input  name="empName" type="text" size="12" maxlength="10"/><span class="must">必填</span>
+                </td>
+            </tr>
+            
+            <tr><th>暱稱</th>
+                <td>
+                    <input name="nickname" type="text" size="12" maxlength="10"/>
+                </td>
+            </tr>
+            
+            <tr><th>身分證字號</th>
+                <td>
+                    <input name="idNo" type="text" size="12" maxlength="10"/><span class="must">必填</span>
+                </td>
+            </tr>
+            
+            <tr><th>性別</th>
+                <td>
+                    <input name="sex" type="ratio" value="1"/>男&nbsp;&nbsp;&nbsp;
+                    <span class="must">必填</span>
+                </td>
+            </tr>
+            
+            <tr><th>生日</th>
+                <td>
+                    <input name="yyyy" type="text" size="4" maxlength="4"/>-
+                    <input name="mm" type="text" size="2" maxlength="2"/>-
+                    <input name="dd" type="text" size="2" maxlength="2"/>
+                    <span class="must">必填</span>(格式如：1970-01-01)
+                </td>
+            </tr>
+            
+            <tr><th>電話</th>
+                <td>
+                    <input name="tel" type="text" size="10" maxlength="10"/><span class="must">必填</span>
+                </td>
+            </tr>
+            
+            <tr><th>Email</th>
+                <td>
+                    <input name="email" type="text" size="50" maxlength="50"/><span class="must">必填</span>
+                </td>
+            </tr>
+            
+            <tr><th>大頭貼</th>
+                <td>
+                    <input name="photo" type="file"/>
+                </td>
+            </tr>
+
+            <tr><th>專長</th>
+                <td>
+                    <input name="skill" type="text" size="50" maxlength="50"/><br>(格式如：跳火圈、胸口碎大石、睡覺)
+                </td>
+            </tr>
+
+        </table>
+        <p style="text-align:center">
+            <input type="button" id="btnSubmit" value="確定新增"/>&nbsp;&nbsp;<input type="reset"  value="復原"/>
+        </p>
+    </form>
+    <script>
+        
+        function checkForm(){
+            //取得大頭貼的檔案名稱
+            let PhotoFileName = document.getElementsByName("photo")[0].value;
+            
+            //============================================
+            //============================================
+            //如何解決主檔名中包含副檔名的問題
+            //由右而左的方向，找出自串中的小數點位置
+            alert(PhotoFileName);
+            let start = PhotoFileName.lastIndexOf(".") + 1;
+            //===========================================
+
+            //檢核是否有副檔名
+            if( start === 0){
+                alert("檔案格式不明，請重新挑選")
+            }
+
+            //從小數點的後一個字元開始到字串的最後面，取出一個子字串
+            let ext = PhotoFileName.substr( start, PhotoFileName.length);
+
+            alert(ext);
+            // ==============================================
+            //方法1：
+            let imageArray = ["bmp","jpg","gif","png"];
+            let found = false;
+
+            for( i in imageArray){
+                if(ext.toLowerCase() == imageArray[i]){
+                    found = true;
+                }
+            }
+
+            if( found == false){
+                alert("檔案名稱格式錯誤: "+ext);
+            }else
+            {
+                alert("檔案名稱格式正確: "+ext);
+
+            }
+           
+            //==============================================
+            //方法2：
+            //運用網路資源
+            //https://cythilya.github.io/2017/05/08/javascript-find-item-in-an-array/
+            // let imageArray = ["bmp","jpg","gif","png"];
+
+            // if( imageArray.indexOf(ext.toLowerCase()) === -1 ) {
+            //     alert("檔案名稱格式錯誤"+ext);
+            //     return;
+            // }
+            //==============================================
+        }
+            
+        
+        
+        
+        function init(){
+            //取得當天的日期
+            let str = "2021年3月1日"
+            
+            //取得物件
+            let DatePanel = document.getElementById("datePanel");
+
+   
+            //改變頁面上date Panel的內容
+            DatePanel.innerHTML = str;
+            
+            //改變頁面上date Panel的外觀
+            DatePanel.style.color = "deepPink";
+            DatePanel.style.fontSize = "30px";
+            DatePanel.style.backgroundColor = "pink";
+
+            // =======================================================
+            document.getElementById("btnSubmit").onclick=checkForm;
+            // =======================================================
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

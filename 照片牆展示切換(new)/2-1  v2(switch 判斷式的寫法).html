@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 照片牆展示切換(switch判斷句) v2 </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/v1.css">
+</head>
+<body>
+    <div id="app">
+        <div id="contentPhoto"></div>
+        <div class="menu">
+            <nav>
+                <a id="a1" "><img src="images/small/a1.jpg" alt=""></a>
+                <a id="a2" "><img src="images/small/a2.jpg" alt=""></a>
+                <a id="a3" "><img src="images/small/a3.jpg" alt=""></a>
+                <a id="a4" "><img src="images/small/a4.jpg" alt=""></a>
+                <a id="a5" "><img src="images/small/a5.jpg" alt=""></a>
+            </nav>
+        </div>
+    </div>
+    
+    <script>
+        //switch判斷式 的語法     
+        
+        //取得元件
+        let ContentPhoto = document.querySelector("#contentPhoto");
+        let A1 = document.querySelector("#a1");
+        let A2 = document.querySelector("#a2");
+        let A3 = document.querySelector("#a3");
+        let A4 = document.querySelector("#a4");
+        let A5 = document.querySelector("#a5");
+        
+        //使用元件
+        
+        function showPhoto() 
+        {
+            console.log(this);
+            if(this.id === "a1"){ContentPhoto.style.backgroundImage = 'url("images/big/a1.jpg")';                
+            if(this.id === "a2"){ContentPhoto.style.backgroundImage = 'url("images/big/a2.jpg")';                
+            if(this.id === "a3"){ContentPhoto.style.backgroundImage = 'url("images/big/a3.jpg")';                
+            if(this.id === "a4"){ContentPhoto.style.backgroundImage = 'url("images/big/a4.jpg")';                
+            if(this.id === "a5"){ContentPhoto.style.backgroundImage = 'url("images/big/a5.jpg")';                
+            
+            // =====================================================================
+            //使用 if(){   }else{  }
+            //使用 if(){   }else if(){         }else{      }          
+            
+            // if(this.id === "a1"){
+            //     ContentPhoto.style.backgroundImage = 'url("images/big/a1.jpg")';                
+            // }else if(this.id === "a2"){
+            //     ContentPhoto.style.backgroundImage = 'url("images/big/a2.jpg")';
+            // }else if(this.id === "a3"){
+            //     ContentPhoto.style.backgroundImage = 'url("images/big/a3.jpg")';
+            // }else if(this.id === "a4"){
+            //     ContentPhoto.style.backgroundImage = 'url("images/big/a4.jpg")';
+            // }else if(this.id === "a5"){
+            //     ContentPhoto.style.backgroundImage = 'url("images/big/a5.jpg")';
+            // }
+            // ======================================================
+            //使用emmet選擇語法架構
+
+            switch (this.id) {
+                case "a1":
+                    ContentPhoto.style.backgroundImage = 'url("images/big/a1.jpg")';           
+                    break;
+                case "a2":
+                    ContentPhoto.style.backgroundImage = 'url("images/big/a2.jpg")';           
+                    break;
+                case "a3":
+                    ContentPhoto.style.backgroundImage = 'url("images/big/a3.jpg")';           
+                    break;
+                case "a4":
+                    ContentPhoto.style.backgroundImage = 'url("images/big/a4.jpg")';          
+                    break;
+                default:
+                    ContentPhoto.style.backgroundImage = 'url("images/big/a5.jpg")';          
+                    break;
+            }
+            
+        }
+        //監聽事件
+        A1.addEventListener('click', showPhoto);
+        A2.addEventListener('click', showPhoto);
+        A3.addEventListener('click', showPhoto);
+        A4.addEventListener('click', showPhoto);
+        A5.addEventListener('click', showPhoto); 
+        
+    </script>
+    </body>
+</html>

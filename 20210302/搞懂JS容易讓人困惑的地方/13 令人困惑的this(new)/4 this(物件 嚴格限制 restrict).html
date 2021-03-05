@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // let foo = {
+        //     name : "Rambo",
+        //     printName: function(){
+        //         console.log(this.name);
+        //         return function(){
+            
+            //             console.log(this);
+            //             console.log(this.name);
+            //         }
+            //     }
+            // }
+            
+            // let bar = foo.printName();
+            // console.log(bar);
+            
+            // bar();
+            
+            // ========================================================
+        //     "use strict";
+            
+        //     let foo = {
+        //         name : "Rambo",
+        //         printName: function(){
+        //         console.log(this);
+        //         return function(){
+        //             console.log(this.name);
+        //         }
+        //     }
+        // }
+
+        // let bar = foo.printName();
+        // bar();
+        // 註：在嚴格模式下(strict),this 是 undefined
+        // 要如何解決這個問題呢？
+        // =========================================
+        // "use strict";
+        
+        // let foo = {
+        //     name : "Rambo",
+        //     printName: function(){
+        //         let that = this;
+        //         return function(){
+        //             console.log(that.name);
+        //         }
+        //     }
+        // }
+
+        // let bar = foo.printName();
+        // bar();
+
+        // 總結：
+        //    1 是誰來執行function非常重要
+        //    2 若函式 沒有人來執行,this所指的就global(全域,就是window)
+        //    3 當函式沒有依附在特定的物件之下（如bar()其this只的就是 全域物件window）
+        //    4 例如 foo.printName(),函式printName()依附在foo物件下，所以函式內的this就是foo
+
+    </script>
+</body>
+</html>

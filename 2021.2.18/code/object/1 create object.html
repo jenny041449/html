@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 建立物件成員</title>
+</head>
+<body>
+    <script>
+        //建立物件
+        let obj = new Object();
+        obj.x = 3;
+        obj.y = 4;
+        //函式也可以是物件的成員
+        obj.show =function()
+        {
+            console.log('Hello');
+        };
+
+        //使用物件
+        console.log(obj);
+        alert(obj.x + obj.y);
+        obj.show();
+    </script>
+</body>
+</html>

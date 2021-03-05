@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 this(建構值)</title>
+</head>
+<body>
+    <script>
+        function myClass(name){
+            this.name = name;   
+            //this 救代表 16 所建構的foo
+        }
+
+        let foo = new myClass("Rambo");
+        
+        alert(foo.name);
+    </script>
+</body>
+</html>

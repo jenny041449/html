@@ -1,0 +1,85 @@
+<div class="newsBox" id="newsBox">
+	<ul id="newsList" class="newsList fl">
+		<li class="newsLi">111111111</li>
+		<li class="newsLi">222222222222</li>
+		<li class="newsLi">3333333333333</li>
+		<li class="newsLi">44444444444</li>
+		<li class="newsLi">111111111</li>
+	</ul>
+</div>
+<style>
+*{
+   	margin: 0;padding: 0;list-style: none;
+   }
+   .fl{
+   	float: left;
+   }
+
+   .newsBox{
+   	height: 30px;
+   	line-height: 30px;
+   	overflow: hidden;
+   	margin:50px auto;
+   	background: #ddd;
+   }
+   .newsList{
+   	margin-top: 0;
+   	/*transition:margin-top 1s;*/
+	/*-webkit-transition:margin-top 1s;*/ /* Safari and Chrome */
+   }
+   .newsList li{
+   	/*display: none;*/
+   	/*float:left;*/
+   	margin: 0 10px;
+   	height: 30px;
+   	line-height: 30px;
+   }
+   .newsList li:first-child{
+   	/*display: block;*/
+   }
+</style>
+<script>
+   var timer, speed = 1500, iNum = 0;
+var newsBox = document.getElementById('newsBox');
+var newsList = document.getElementById('newsList');
+var len = document.getElementsByClassName('newsLi').length-1;
+
+newsList
+
+// function fn1 (){  //timer/next function
+// 	iNum++;
+// 	newsList.style.transition = 'margin-left 1s';
+// 	if (iNum>len) {
+// 		newsList.style.transition = '';
+// 		newsList.style.marginLeft = -30+'px';
+// 		iNum = 0;
+// 	}
+	
+// 	newsList.style.marginLeft = -30*iNum+'px';
+	
+// 	return false;
+// }
+// function fn2 (){  //prev function
+// 	iNum--;
+// 	newsList.style.transition = 'margin-left 1s';
+// 	if (iNum<0) {
+// 		newsList.style.transition = '';
+// 		newsList.style.marginLeft = -120+'px';
+// 		iNum = len;
+// 	}
+// 	newsList.style.marginLeft = -30*iNum+'px';
+// 	return false;
+// }
+// function setT(){  //set timer
+// 	timer = setInterval(fn1,speed);
+// 	return false;
+// }
+// function clearT(){  //clear timer
+// 	clearInterval(timer);
+// 	return false;
+// }
+// timer = setInterval(fn1,speed);
+
+// newsBox.onmouseover = clearT;
+// newsBox.onmouseout = setT;
+</script>

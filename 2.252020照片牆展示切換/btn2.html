@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>
+        點我
+    </button>
+</body>
+
+</html>
+<style>
+    button {
+        width: 100px;
+        height: 70px;
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+        background: pink;
+        border-radius: 20%;
+        color: white;
+    }
+
+    button:hover {
+        border-radius: 0%;
+    }
+
+    button::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #9254de;
+        transform-origin: center;
+        transform: translate3d(-50%, -50%, 0) scale(0, 0);
+        transition: transform 0.45s ease-in-out;
+    }
+
+
+    button:hover::before {
+        content: "";
+        /* transition: transform 10s ease-in-out; */
+        transform: translate3d(-50%, -50%, 0) scale(15, 15);
+    }
+</style>

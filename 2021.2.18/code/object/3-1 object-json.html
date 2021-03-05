@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 使用JSON建立物件</title>
+</head>
+<body>
+    <script>
+        // let man={};
+        // console.log(man);
+        
+        //=====================================
+        //建立物件
+        // let man=new Object();
+        // man.age=18;
+        // man.name="阿龍";
+        // // 使用物件      
+        // console.log(man);
+        
+        //======================================
+        //建立物件       
+        // let man=new Object();
+        // man.age=18;
+        // man.name="阿龍";   
+        // man.talk=function()
+        // {
+        //     console.log('大家好，我是龍哥');
+        // };   
+        
+        //使用物件      
+        // console.log(man);
+        // console.log(man.age);
+        // console.log(man.age > 18);
+        // console.log(man.age < 20);
+        
+        // man.talk();//呼叫 物件的方法(函式)
+        
+        //=========================================
+        //建立物件       
+        // let man=new Object();
+        // man.age=18;
+        // man.name="阿龍";   
+        // man.talk=function()
+        // {
+        // //     //物件方法中使用this, this代表物件本身
+        //     console.log('Hello 我是',this.name,'年齡',this.age);
+        // };   
+        
+        //使用物件      
+        // console.log(man);
+        // console.log(man.age);
+        // console.log(man.age > 18);
+        // console.log(man.age < 20);
+        
+        // man.talk();//呼叫 物件的方法(函式)
+
+        //======================================
+        //使用JSON 語法 建立物件
+        //(成員名稱.資料,成員名稱.資料,.....)
+        let man={
+                 age:15,
+                 name:'阿龍',
+                 talk:function()
+                     {
+                         console.log('Hello 我是',this.name,'年齡',this.age,'歲');
+                     }
+        };  
+        
+        man.talk();
+        
+        //使用物件
+        // console.log(man);
+        // console.log(man.age > 18);
+        // console.log(man.age < 20);
+        
+        // man.talk();//呼叫 物件的方法(函式)
+        // console.log(man);
+    </script>
+</body>
+</html>

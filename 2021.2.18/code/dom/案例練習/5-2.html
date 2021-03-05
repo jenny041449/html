@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <span>關於我</span>
+   <span  onclick="changeToExp()">專長興趣</span>
+   <hr/>
+   <div id="about">大家好 我是楊博斯</div>
+   <div id="exps" style="display:none">我有資訊專長，喜歡研究中醫會算命和治病</div>
+
+   <script>
+       function changeToExp()
+       {
+           //先取得要操作的標籤
+           
+           let About = document.querySelector("#about");
+           let Exps = document.querySelector("#exps");
+
+           //再對標籤做操作
+           About.style.display = "none";
+           Exps.style.display  = "block";
+       }  
+      
+   </script>
+
+</body>
+</html>

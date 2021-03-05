@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 簡介 快速開始</title>
+</head>
+<body>
+
+    <script>
+        // ======在console 中印出資料  console.log(資料);  ========
+
+        // console.log('Hello JavaScript');
+        // console.log("Welcome to TVDI");
+        // Console.log("跨平台網頁設計班");
+        // console.log(xyz);    
+      
+
+        // =====彈出視窗 alert() =====
+        // console.log("Hello JavaScript");
+        // alert("Hello JavaScript");             
+
+        // =================資料、資料型態=====================
+
+        // 如果3是數值型態，就去做運算
+        // if(3 是整數型態) {  做運算  }  
+        // if(typeof(3) == number ) {    }
+        // ECMAscript         
+        // console.log(typeof(3));
+
+        // alert(typeof 3);//typeof  查看「資料型別」
+        // document.write(5);
+
+        // 資料型態         
+        // 數值 3   -50   3.14159   -1.244 
+        // 字串 "Hello"   "你好"    '單引號也OK' 
+        // 布林值  true  false 
+        // 空值 1 null  2 undefined(兩種  1 無定義 2 有定義但未設定值   
+        // let a = null;
+        // alert(typeof a);
+        // console.log(a);
+        // if(使用者有輸入資料){}
+        // if(使用者輸入的資料不是空值)
+        // if(使用者輸入的資料!== null)      
+        
+        // a;  alert(a);
+        // let a;   a =1;   alert(typeof(a));
+        
+        // alert(typeof true);
+        // alert(typeof false);
+        
+        //================== 變數與常數 =========================
+        //宣告變數 ： let 變數名稱
+        // let x; alert(x);
+        // let name;  console.log(name);
+        
+        // let x;
+        // console.log(x);
+        // x = 5;
+        // console.log(x);
+        
+        // x= null;
+        // console.log(x);
+        
+        // x=true;
+        // console.log(x);
+        
+        
+        //字串的處理方式     
+        // x="Hello";
+        // y='let's go';//要如何修正呢
+        // y="let's go";
+        // console.log(y);
+
+        // let friendName = "Rambo";
+        // let content = "你好嗎？"
+        // console.log(friendName+content);
+        // console.log(friendName+'    '+content);
+        //==================================================
+        //數字與字串相加===>數字自動轉型為字串
+        // let myName = 'Mary';
+        // let myAge = 20;
+        // console.log('我是'+myName,'我今年20歲');
+        // let content = myName + myAge;
+        // console.log(content);
+        // console.log(typeof content);
+        // console.log('我是'+myName+",我今年"+myAge+"歲");
+        // 樣版字元
+        // console.log(`我是${myName}我今年${myAge}歲`);
+
+        //練習  我體重55公斤，我是小美（55 小美 設為變數）        
+
+        //字串的長度 變數.length
+        // let x = 'Rambo';
+        // console.log(x.length);
+
+        //字串變數.trim() 去掉字串的前後空白
+        // let myEmail = "abc@tvdi.gov.tw"
+        // let myEmail = "         abc@tvdi.gov.tw   ";
+        // console.log(myEmail);
+        // console.log(myEmail.length);
+        // let updateEmail = myEmail.trim();
+        // console.log(updateEmail);
+        // console.log(updateEmail.length);
+        
+        //NaN 1 非數值之異常狀況  2 產生時機  
+        // 狀況1
+        // let myName = 'Rambo';
+        // let myAge = 20;
+        // let content = myName *  myAge;
+        // console.log(content);
+        // console.log(typeof content);
+        // 狀況2
+        //parseInt(),把數值型的文字（例如字串"3"）轉換成數值型態
+        // let x = 3;
+        // console.log(x+=2); //x = x +2  
+        // let x = "3";
+        // x = parseInt(x)+2;
+        // console.log(x);
+        
+        // let age2 = parseInt("Hello");
+        // console.log(age2);
+     
+        
+        // 常數constant
+        // const discount = 0.8;
+        // discount =100;//錯誤的程式,不能更新常數裡面的資料
+        //================== 運算符號 =========================
+        
+        //算術運算 ： +  -   *  %（mod）求餘數 /
+        // let x = 11%3;
+        // console.log(x);
+        // x + 1;
+        // console.log(x);// 會印出什麼
+        
+        //指定運算 ： =  +=  -=  *=   /+   %=
+        // x+=1;
+        // x-=4;
+        // x *=5 ;
+        // console.log(x);//會印出什麼
+        
+        // 比較運算 ： >    <      >=      <=     ==   ===
+        // x ="Hello"=="Hello";
+        // x= 5 == "5"// == 會先型態轉換後 再做比較
+        // x= 5 === "5"// === 不做型態轉換，直接比較
+        // alert(x);
+        
+        //單元運算：  !(not)  !=    ++     --
+        // let x =  true;
+        // x = ! x;
+        // alert(x);
+        // let x=3;
+        // x++;
+        // alert(x);
+        
+        //邏輯運算： &&且     ||或  
+        // let test = false ||  false;
+        // alert(test);
+        
+        // 請使用者輸入兩個數字，得到乘法的結果
+        // 要求使用者輸入： prompt(字串,字串)
+        // let n1  =  prompt("請輸入數字N1","");
+        // let n2  =  prompt("請輸入個數字N2","");
+        // let result = n1 * n2;
+        // alert("N1與N2相乘的結果是"+result);
+        // alert("N1與N2相乘的結果是"+result);
+
+        
+        //============== 流程控制：判斷式 =========================
+        // if 判斷式的基本語法
+        // if(true)
+        // {
+        //     alert("我是大哥,我出現了，因為if 判斷式成立");
+        // }
+        // alert("如果沒見到大哥，就是if判斷式不成立");
+        
+        // if(false)
+        // {
+        //     alert("我是大哥,我出現了，因為if 判斷式成立");
+        // }
+        // alert("如果沒見到大哥，就是if判斷式不成立");
+
+        // let money = prompt("要領多少錢","");
+        // if (money <= 30000)
+        // {
+        //     alert("好滴，沒有問題");
+        // }
+        // console.log("判斷式結束");
+
+        // let money = prompt("要領多少錢","");
+        // if (money <= 30000) 
+        // {
+        //     alert("好滴，沒有問題");
+        // } else  
+        // {
+        //     alert("很抱歉，一次最多只能領3萬元");
+        // }
+        // console.log("判斷式結束");
+
+        //流程控制：迴圈  
+        //while 迴圈
+        // let n = 0;           
+        // while(n<3)
+        // {
+        //     console.log(n);
+        //     n = n +1;
+        // }
+        // alert(n);   //n值為多少
+     
+        //for 迴圈        
+        // let n = 0;
+        // while(n<3)
+        // {
+        //     console.log(n);
+        //     // n++; 
+        // }
+     
+        // for(let n = 0;n<3;n=n+1)
+        // {
+        //     console.log(n);
+        // }
+
+        //練習：用 for 指令 列出 1～9
+        
+        // for(let n=0;n<3;n++) 
+        // {            
+        //     console.log(n);
+        // }
+
+        // while(true)
+        // {
+        //     console.log("Hello");
+        // }
+
+        // let n = 0;
+        // while(n<5)
+        // {
+        //     console.log(n);
+        //     n++;
+        // }
+        //將以上while迴圈  改為 for迴圈的寫法
+        // for(let n=0;n<5;n++)
+        // {
+        //     console.log(n);
+        // }
+
+        // 計算 1+2+3+...+10 的結果
+
+        // 方法1 梯形公式 (上底＋下底)*高 除以 2
+        // let result = ((1+10)*10)/2;
+        // alert('1加到10的和為'+result);
+
+        // 方法2 使用while迴圈
+        // let n=1;
+        // let sum = 0;
+        // while(n<=3)
+        // {
+        //     //  console.log(n);
+        //      sum  = sum + n;
+        //      n = n +1;                                  
+        // }
+        // alert(sum);
+       
+        // let n = 1;// 追蹤1,2,3...,10
+        // let sum = 0;//用sum變數把 每次出現的n 累加起來
+        // while(n<=10)
+        // {
+        //     sum += n;// sum = sum + n;
+        //     n++
+        // }
+        // alert(sum);
+        
+        // 用excel來trace 程式 1+2+3
+        // let n = 1;// 追蹤1,2,3...,10
+        // let result = 0;//用result變數把 每次出現的n 累加起來
+        // while(n<=3)
+        // {
+        //     result += n;// result = result + n;
+        //     n++
+        // }
+        // alert(result);
+        // 迴圈次數      result    n
+        //    0            0       1
+        //    1            1       2 
+        //    2            3       3 
+        //    3            6       4
+
+        // 迴圈中的指令 break      continue
+        
+        // let n = 0;
+        // while(n<3)
+        // {
+        //     if(n==1)
+        //     {
+        //         break;
+        //     }
+        //     document.write(n);
+        //     n++;
+        // }
+
+        // for(n=0;n<3;n++)
+        // {
+        //     if(n==1)
+        //     {
+        //         continue;
+        //     }
+        //     document.write(n);
+        // }
+
+        // break  指令
+        // let n = 0;
+        // while(n<5)
+        // {
+        //     document.write(n);
+        //     n++
+        // }
+        
+        // let n = 0;
+        // while(n<5){
+        //     break; 
+        //     document.write(n);
+        //     n++
+        // }
+        
+        // let n = 0;
+        // while(n<5)
+        // {
+        //     document.write(n);
+        //     n++
+        //     break; 
+        // }
+
+        // for(let n=0;n<5;n++)
+        // {
+        //     if(n==3)
+        //     {
+        //         continue;//強迫回到迴圈的上方，忽略下面的指令，進入下一圈
+        //     }
+        //     document.write(n);
+        // }
+        
+        //
+        // for(let n=0;n<5;n++)
+        // {
+        //     if(n%2 == 0)
+        //     {
+        //         continue;//強迫回到迴圈的上方，忽略下面的指令，進入下一圈
+        //     }
+        //     document.write(n);
+        // }
+
+        // let myName = "Rambo";
+        // let myAge = 18;
+        // // let content = "你好我是"+myName+"今年"+ myAge+"歲";
+        // // 樣板字面值（Template literals） -->
+        // let content = `你好我是${myName},今年${myAge}歲`;
+        // console.log(content);  
+        
+        // 練習： 我是楊博斯，身高181公分
+        
+        
+        </script> 
+</body>
+</html>

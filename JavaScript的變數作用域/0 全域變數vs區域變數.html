@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全域變數與區域變數</title>
+</head>
+<body>
+    <script>
+        //golbal variable(Window層次)
+        // var a = 1;
+        // console.log(a);
+        // console.log(window);
+        // console.log(window.a);
+    // =========================================    
+        // let a = 1;
+        // console.log(a);
+        // console.log(window);
+        // console.log(window.a);
+    // ========================================== 
+        // let a = 1;
+        // console.log(a);
+    //    ===========================================
+    
+        // function ABC(){
+        //     var a = 1;
+        //     console.log(a);
+        // }
+        // ABC(); //1
+    // ============================================
+        
+        // function ABC(){
+        //     var a = 1;
+        //     console.log(a);
+        // }
+        // ABC(); //1
+        // console.log(a);  
+        //==============================================
+        // var a = 100;
+
+        // function ABC(){
+        //     var a = 1;
+        //     console.log(a);
+        // }
+        // ABC(); //1
+        // console.log(a); //100
+        // ====================================================
+            // function ABC(){
+            //     var a = 1;                
+            // }
+
+            // function DEF(){
+            //     a = a + 10;                
+            //     console.log(a);
+            // }
+
+            // DEF(); //no
+            // ===============================================
+            // var a = 8
+
+            // function ABC(){
+            //     let a = 1;                
+            // }
+
+            // function DEF(){
+            //     a = a + 10;                
+            //     console.log(a);
+            // }
+
+            // DEF(); //18
+            // ==============================================
+            // let a = 8
+
+            // function ABC(){
+            //     let a = 1;                
+            // }
+
+            // function DEF(){
+            //     a = a + 10;                
+            //     console.log(a);
+            // }
+
+            // DEF(); //18
+            // =========================================
+            let a = 8
+
+            function ABC(){   
+                // console.log(a);   
+                let a = 1;   
+                console.log(a);             
+            }
+
+            function DEF(){
+                console.log(a);
+                a = a + 10;                
+                console.log(a);
+            }
+
+            ABC();
+            DEF();//18
+            // ============================================
+            // let a = 8
+
+            // function ABC(){
+            //     a = 1;                
+            // }
+
+            // function DEF(){
+            //     a = a + 10;                
+            //     console.log(a);
+            // }
+
+            // ABC();
+            // DEF();//11
+
+
+
+
+    </script>
+</body>
+</html>

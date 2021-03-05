@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content" onclick="change()">這是一段字</div>
+    <span id="keyword">這是一段字</span>
+
+
+</body>
+
+</html>
+<script>
+    //取得標籤物件
+    // console.log(document.querySelector("#content"));
+    // console.log(document.querySelector("#content").innerHTML);
+    let Content = document.querySelector("#content");
+    console.log(Content);
+    console.log(Content.innerHTML);
+    let divElement = document.querySelector("#content");
+    // let spanElement = document.querySelector("#keyword");
+
+    //操作標籤物件 的 HTML 和 CSS
+
+    // divElement.style.fontSize = "30px";
+    // divElement.style.color = "blue";
+    function change() {
+        divElement.innerHTML = "這是新的字";
+        // 改變class名稱
+        divElement.className = "welcome";
+    }
+</script>
+<style>
+    .welcome {
+        background: blue;
+    }
+</style>

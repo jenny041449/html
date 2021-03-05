@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let score = prompt('請輸入成績', '');
+        let grade;
+
+        score = Number(score);
+        grade = score >= 80 ? "優等" : (score >= 60 ? "及格" : "不及格")
+
+        // if(score >= 80){
+        //     grade = "優等";
+        // }else if(score >=60 ){
+        //     grade = "及格";
+        // }else{
+        //     grade = "不及格";
+        // }
+
+        alert(grade);
+
+        //===================================
+        // 請改寫為三元運算子
+
+        // let score = prompt('請輸入成績','');
+        // let grade;
+
+        // score = Number(score);
+
+        // grade = score >= 80 ? "優等" :(score>=60 ? "及格":"不及格");
+
+        // grade = score >= 80? "優等" 
+        // :(score>=60 ? "及格":"不及格");
+
+
+        // if(score >= 80){
+        //     grade = "優等";
+        // }else if(score >=60 ){
+        //     grade = "及格";
+        // }else{
+        //     grade = "不及格";
+        // }
+
+        // alert(grade);
+
+    </script>
+</body>
+
+</html>

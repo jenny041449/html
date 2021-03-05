@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">這是一段字</div>
+    <span id="keyword">這是一段字</span>
+
+    <script>
+        //取得標籤物件
+        let divElement  = document.querySelector("#content");
+        let spanElement = document.querySelector("#keyword");
+
+        //操作標籤物件 的 HTML 和 CSS
+        divElement.innerHTML = "這是新的字";
+        divElement.className = "welcome";
+        divElement.style.fontSize = "30px";
+        divElement.style.color = "blue";
+    </script>
+</body>
+</html>

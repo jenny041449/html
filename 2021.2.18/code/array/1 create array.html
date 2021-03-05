@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 creat array</title>
+</head>
+<body>
+    <script>
+        //建立陣列
+        // let arr=new Array();
+        // let arr=[];//建立陣列的另一種方法（較常用）
+        //查看陣列的內容
+        // console.log(arr);
+//====================================================
+        // let arr=[];
+        
+        // arr.push(3);
+        // arr.push(4);
+        // arr.push(8);
+        // console.log(arr);
+        
+        // //使用陣列元素
+        // alert(arr[0]);
+        // alert(arr[1]);
+        // alert(arr[2]);
+        // alert(arr[3]);       
+        //=================================================      
+        //陣列的長度 陣列.length
+        // let arr=[];
+        // alert(arr.length);
+        
+        // arr.push(3);
+        // arr.push(4);
+        // alert(arr.length);
+        //============================================= 
+        //練習：使用for迴圈  取出陣列中的元素 
+        // let arr=[];
+        
+        // arr.push(3);
+        // arr.push(4);
+        // arr.push(8);
+        
+        // for(let i=0;i<arr.length;i++)
+        // {
+        //    alert(arr[i]); 
+        // }
+        //===========================================
+        //承上題，試著用函數來寫 迴圈 
+        
+        
+        
+        
+        
+        //============================================
+        //直接把正整數資料放進陣列中,並用for 回圈將資料1 做加總運算 2 求平均
+        let arr=[3,4,18,5,7];
+        let total = 0;
+        for(let i=0;i<arr.length;i++)
+        {
+            total = total + arr[i];
+            // 也可以寫成這樣total += arr[i]; 
+        }
+        let avg = total/arr.length;
+        alert(`陣列元素的總和為${total}`);
+        alert(`陣列元素的平均為${avg}`);
+    </script>
+</body>
+</html>

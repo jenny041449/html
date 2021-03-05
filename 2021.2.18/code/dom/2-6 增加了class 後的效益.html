@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript：HTML DOM 網頁畫面操作</title>
+    <!-- =========================================== -->
+    <style>
+        .text {
+            text-decoration: underline;
+            font-weight: bold;            
+        }
+    </style>
+</head>
+<body>
+    <h3>HTML DOM 畫面操作</h3>
+    
+    <!-- 只希望改變div的內容，而不要整個畫面都被變更 -->
+    <div id="content" >練習網頁畫面操作</div>
+    <button onclick="change()">點我</button>
+
+    <script>
+        function change(){
+            //取得標籤物件
+            let Content = document.querySelector("#content");
+
+            //操作標籤物件
+             Content.innerHTML = "對特定的標籤作操作";
+            //修改(增加)div的className
+            Content.className = "text";
+            //思考：增加了className 我們可以做些什麼 讓使用者看到
+            Content.style.fontSize = "30px";//font-size:30px
+            Content.style.color = "red";
+        }
+    </script>
+</body>
+</html>

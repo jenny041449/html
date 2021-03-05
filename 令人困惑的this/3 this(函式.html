@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this(函式)</title>
+</head>
+<body>
+    <script>
+        // function foo(){
+        //     this.name = "rambo";
+
+        //     console.log(this.name);
+        // }
+
+        // foo();
+        
+        //Q:function內的this是誰？
+
+        // ======================================
+        // function foo(){
+        //     this.name = "rambo";
+
+        //     console.log(this);
+        // }
+
+        // foo();
+        // =======================================
+        // function foo(){
+        //     this.name = "rambo";
+
+        //     console.log(this);
+        // }
+
+        // foo();
+
+        // console.log(window.name)
+        
+        // ======================================
+        //如何避免無意間幫 window增加了一個name的屬性
+        //（避免函式中使用this 污染到 global的 object）
+        //===>嚴格模式 "use strict";
+        
+        // "use strict"
+
+        // function foo(){
+
+        //     console.log(this);
+        // }
+
+        // foo();
+
+        // console.log(window.name);
+
+
+    </script>
+</body>
+</html>

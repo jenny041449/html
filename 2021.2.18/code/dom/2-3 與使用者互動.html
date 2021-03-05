@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript：HTML DOM 網頁畫面操作</title>
+</head>
+<body>
+    <h3>HTML DOM 畫面操作</h3>
+    
+    <!-- 新增和使用者互動的事件 -->
+    <div onmousemove="change()">練習網頁畫面操作</div>
+    <button onclick="change()">點我</button>
+
+    <script>
+        function change(){
+            document.body.innerHTML = "新的內容";
+        }
+    </script>
+    
+</body>
+</html>

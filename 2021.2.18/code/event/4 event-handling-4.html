@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 事件處理的練習</title>
+    <style>
+        .btn
+        {
+            background-color: #ffcccc;
+            padding: 8px;
+            border-radius:5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>事件處理的練習</h3>
+    <!-- 自製簡易按鈕效果 -->
+    <!-- 補充：色彩的網站 http://flatuicolors.com -->
+    <span>點我.....</span>
+    <span 
+            class='btn'
+            onmouseover="over(this);" onmouseout="out(this);"
+            onmousedown="down(this);" onmouseup="up(this);"   
+    >點我</span>
+    
+    <!-- <span 
+            class='btn'
+            onmouseover="over(this);" onmouseout="out(this);"
+            onmousedown="down(this);" onmouseup="up(this);"   
+    >第二個按鈕</span> -->
+
+    <script>
+        function over(elem)
+        {
+            elem.style.backgroundColor="#ddcccc";
+        }
+        
+        function out(elem)
+        {
+            elem.style.backgroundColor="#ffcccc";
+        }
+        
+        function up(elem)
+        {
+            elem.style.fontWeight="normal";
+        }
+        
+        function down(elem)
+        {
+            elem.style.fontWeight="bold";
+        }
+    </script>    
+       
+</body>
+</html>

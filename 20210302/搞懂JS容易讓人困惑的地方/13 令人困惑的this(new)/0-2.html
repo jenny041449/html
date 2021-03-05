@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var great = function(){
+            debugger;
+            return "hello, " + this.name;
+        }
+        
+        var host = {
+            name: "rambo",
+            greatFunc : great
+        }
+        
+        console.log(host.greatFunc());
+
+    </script>
+</body>
+</html>

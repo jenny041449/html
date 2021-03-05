@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名片製作</title>
+    <style>
+        body{
+            background-color: #eeeeee;
+            font-family: "Microsoft Yahei";
+        }
+        
+        .card {
+            width: 450px;
+            height: 270px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card>.top {
+            margin-left: 20px;   
+            margin-top: 35px;
+            width: 410px;
+            color: #3498db;
+        }
+        .card>.top> p{  
+             font-size: 20px;
+             border-bottom: 2px solid #2980b9;
+        }
+        
+        .mid {
+            margin-left: 20px;
+            width: 410px;
+            font-size: 14px;
+        }
+        .name , .contact {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+        .name {
+            margin-top: 35px;
+        }
+        .name p{
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        .name>.chinese p {
+            font-size: 18px;
+        }
+        .name>.chinese span {
+            font-size: 12px;
+        }
+
+        .eng {  
+            font-size: 10px;
+        }
+
+         .contact {
+            margin-top: 5px;
+            margin-left: 50px;
+            font-size: 15px;
+            line-height: 15px;
+        }
+        .contact p{
+            margin-bottom: 0px;
+        }
+
+        .bot {   
+            background: #1D7FAA;
+            width: 100%;
+            height: 71px;
+            border-radius: 0 0 10px 10px;
+            color: #FFF;
+            margin-top: 11px;
+        }   
+      .addr , .tel{
+            /* position: relative; */
+            top: 20px;
+            margin: 0 0 0 20px;
+            padding: 5px;
+            font-size: 14px;
+      } 
+</style>
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <p>台北市職能發展學院</p>
+        </div>
+
+        <div class="mid"> 
+            <div class="name">
+              <div class="chinese">
+                 <p>楊博斯  <span>網頁設計師</span></p>        
+              </div>
+              <div class="eng">
+                <p>BOSS YANG</p>
+              </div>     
+            </div>
+            
+            <div class="contact">
+              <div class="tel"></div>
+              <p>聯絡電話:0913-0806449</p>
+              <p>E-mail:tvdi@tvdi.gov.tw</p>
+              <p>公司分機:281</p>           
+            </div>
+          </div>
+          <div class="bot">
+            <p class="addr">地址：11154 臺北市士林區士東路301號</p>
+            <p class="tel">電話：(02)2872-1940(代表號)</p>
+          </div>  
+        </div>      
+    </div>
+</body>
+</html>
