@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container text-align">
+        <h1>重設遊戲</h1>
+        <div class="d-flex" style="position: relative;">
+            <div class="col-2">
+                <h1>玩家1</h1>
+                <p>0</p>
+                <div class="score">
+                        <h3>分數</h3>
+                        <h3>0</h3>
+                </div>
+            </div>
+            <div class="dice">
+                <div >
+                    <img src="./img/dice1.png" alt="" srcset="">
+                </div>
+                <h3>搖骰子</h3>
+            </div>
+            <div  class="col-2">
+                <h1>玩家1</h1>
+                <p>0</p>
+                <div class="score">
+                        <h3>分數</h3>
+                        <h3>0</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+<style>
+    .container{
+        max-width: 1100px;
+    }
+    .d-flex{
+        display: flex;
+    }
+    .col-2{
+        width: 50%;
+    }
+    .text-align{
+        text-align: center;
+    }
+    .dice{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+</style>
