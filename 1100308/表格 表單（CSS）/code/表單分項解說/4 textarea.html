@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊貓問卷調查表</title>
+</head>
+<body>
+    <form action="" method="GET">
+        
+        <input type="file" >
+        <br>
+        
+        <label for = "myName">姓名：</label>
+        <input 
+        id = "myName" 
+        type="text" 
+        name="inputName"
+        required
+        minlength = "2"
+        maxlength = "10"
+        placeholder="請輸入真實姓名"
+        />
+        <br>
+        
+        <label for="gender">性別：</label>
+        <select name="gender" id="gender" required>
+            <option value=""></option>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+            <option value="other">其他</option>
+        </select>
+        <br>   
+        
+        
+        <label for = "tele">電話：</label>
+        <input id = "tele" type="text" name="telephone"/>
+        <br>
+        
+        <label for="email">E-MAIL：</label>
+        <input id="email" type="email" name="email" required>             
+        <br>
+        
+        <label for="age">年齡：</label>
+        <input 
+        id="age"
+        type="number" 
+        name="age" 
+        value = "18"
+        min = "0"
+        max = "120"
+        step = "1"
+        required
+        >
+        <br>
+        
+        <label for="area">地區</label>
+        <input list="areaList"  type="text" name="area" id="area">
+        <datalist id="areaList">
+            <option value="基隆市">基隆</option>
+            <option value="台北市">台北</option>
+            <option value="新北市">新北</option>
+            <option value="台中市">台中</option>
+        </datalist>
+        <br>
+        
+        <!-- ========================================================
+            textarea:
+            
+            ======================================================== -->
+        <label for="suggestion">給網站的建議</label>
+        <br>
+        <textarea 
+        name="suggestion" 
+        id="suggestion" 
+        cols="30" 
+        rows="10"
+        placeholder="感謝提供建議！"
+        ></textarea>
+        <br>
+
+
+
+        <input type="checkbox" name="news" id="checkBox" value="newsPager">
+        <label for="checkBox">訂閱熊貓電子報</label>
+        <br>
+        
+        
+        <label for="">密碼</label>
+        <input type="password" 
+        name="" 
+        id=""
+        minlength = "8"
+        maxlength = "12"
+        
+        >
+        <br>
+        
+            0<input type="range" 
+            name="" 
+            id="" 
+            min="0" 
+            max="100"
+            step = "10"
+            >100
+            <br>
+
+            <button type="submit">提交表單</button>
+            <br>
+        </form>
+
+
+    </body>
+</html>
